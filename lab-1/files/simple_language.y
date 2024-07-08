@@ -14,9 +14,9 @@ int yylex();
 %type<num> expression
 %type<num> assignment
 
-%right '='
-%left '+' '-'
-%left '*' '/'
+%left '='
+%right '+' '-'
+%right '*' '/'
 
 %%
 
