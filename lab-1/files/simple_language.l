@@ -1,6 +1,7 @@
 %{
 #include <cstdlib>
 #include <string>
+#include <iostream>
 #include "y.tab.h"
 %}
 
@@ -15,7 +16,8 @@
 "="                     { return '='; }
 ":"                     { return ':'; }
 [ \t]                   ;  // skip whitespace
-.|\n                    ; /* ignore all the rest */
+\n                      ; /* ignore all the rest */
+.                       { std::cout << "Token invalido." << yytext << std::endl; exit(1); }
 
 %%
 
