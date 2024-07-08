@@ -5,6 +5,7 @@ RUN apt-get update -y \
   && rm -rf /var/lib/apt/lists/*
 
 COPY files /home/files
+COPY programs /home/programs
 
 VOLUME /home
 WORKDIR /home
